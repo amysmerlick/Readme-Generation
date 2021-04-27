@@ -47,7 +47,7 @@ inquirer.prompt([
     type: 'list',
     message: 'Please choose your license',
     name: 'license',
-    choices: ['MIT', 'Apache', 'Boost'],
+    choices: ['GNU', 'Apache', 'Boost'],
     validate: (value) => { if (value) { return true } else { return "Please enter a value to continue"  } },
   },
   {
@@ -69,17 +69,17 @@ inquirer.prompt([
   if (data.license==="Apache") {
    licenseLink =  "https://www.apache.org/licenses/LICENSE-2.0.txt"
   }
-  else if (data.license==="MIT"){
-    licenseLink = "MIT"
+  else if (data.license==="GNU"){
+    licenseLink = "https://choosealicense.com/licenses/lgpl-3.0/#"
   }
   else {
     licenseLink="Boost"
   }
   const filename = 'README.md';
   const readMe = `
-  # ${data.title} / ${data.license} License
+  # ${data.title}
   # Description
-  # ${data.description}
+  ### ${data.description}
   # Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)

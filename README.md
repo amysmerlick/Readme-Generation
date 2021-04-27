@@ -1,7 +1,7 @@
 
-  # amy / Apache License
+  # README GENERATORY
   # Description
-  # amy
+  ### As a developer I want a README generator so that I can quickly create a professional README for a new project.
   # Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -10,19 +10,19 @@
   * [License](#license)
   
   # Installation
-  amy
+  NPM INQUIRER
   ## Usage
-  amy
+  ADD PHOTOS
   ## Contribution
-  amy
+  NPM INQUIRER
   ### Instructions
-  amy
+  USE IN THE TERMINAL
   ## Credits
-  amy
+  GROUP 9
   ## License
-  The application you're enjoying is covered under the Apache license.
-  [![License: Apache](https://img.shields.io/badge/License-Apache-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+  The application you're enjoying is covered under the GNU license.
+  [![License: GNU](https://img.shields.io/badge/License-GNU-yellow.svg)](https://choosealicense.com/licenses/lgpl-3.0/#)
   # Questions
     For questions, please email me, or contact me via GitHub.
-  * Email: amy
-  * GitHub: amy
+  * Email: amysmerlick@gmail.com
+  * GitHub: https://github.com/amysmerlick
