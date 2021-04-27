@@ -77,7 +77,7 @@ inquirer.prompt([
   }
   const filename = 'README.md';
   const readMe = `
-  # ${data.title}
+  # 🔥 ${data.title} 🔥
   # Description
   ### ${data.description}
   # Table of Contents
@@ -95,14 +95,14 @@ inquirer.prompt([
   ${data.contributors}
   ### Instructions
   ${data.instructions}
-  ## Credits
+  ## Credits📚
   ${data.credits}
   ## License
   The application you're enjoying is covered under the ${data.license} license.
   [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](${licenseLink})
-  # Questions
+  # Questions ❓❓
     For questions, please email me, or contact me via GitHub.
-  * Email: ${data.email}
+  * 📧Email: ${data.email} 
   * GitHub: ${data.gitHub}`;
   console.log(readMe);
   fs.writeFile(filename, readMe, (err) =>
