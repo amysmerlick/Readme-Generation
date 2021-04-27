@@ -89,15 +89,15 @@ inquirer.prompt([
   
   # Installation
   ${data.installation}
-  ## Usage
+  # Usage
   ${data.usage}
-  ## Contribution
+  # Contribution
   ${data.contributors}
-  ### Instructions
+  # Instructions
   ${data.instructions}
-  ## Credits📚
+  # Credits📚
   ${data.credits}
-  ## License
+  # License
   The application you're enjoying is covered under the ${data.license} license.
   [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](${licenseLink})
   # Questions ❓❓

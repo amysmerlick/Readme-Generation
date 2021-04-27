@@ -11,15 +11,15 @@
   
   # Installation
   NPM Inquirer
-  ## Usage
-  Add photos here
-  ## Contribution
-  NPM Inquirer
-  ### Instructions
+  # Usage
   Use this in the terminal
-  ## Credits📚
+  # Contribution
+  NPM Inquirer
+  # Instructions
+  Use this in the terminal
+  # Credits📚
   GitHub, classmates
-  ## License
+  # License
   The application you're enjoying is covered under the GNU license.
   [![License: GNU](https://img.shields.io/badge/License-GNU-yellow.svg)](https://choosealicense.com/licenses/lgpl-3.0/#)
   # Questions ❓❓
