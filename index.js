@@ -22,12 +22,6 @@ inquirer.prompt([
   },
   {
     type: 'input',
-    message: 'Please describe the usage',
-    name: 'usage',
-    validate: (value) => { if (value) { return true } else { return "Please enter a value to continue"  } },
-  },
-  {
-    type: 'input',
     message: 'Please list your Contributors',
     name: 'contributors',
     validate: (value) => { if (value) { return true } else { return "Please enter a value to continue"  } },
@@ -68,14 +62,15 @@ inquirer.prompt([
 .then((data) => {
   let licenseLink = ""
   if (data.license==="Apache") {
-   licenseLink =  "https://www.apache.org/licenses/LICENSE-2.0.txt"
+   licenseLink =  "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
   }
   else if (data.license==="GNU"){
-    licenseLink = "https://choosealicense.com/licenses/lgpl-3.0/#"
+    licenseLink = "[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
   }
   const filename = 'README.md';
   const readMe = `
   # 🌺${data.title}🌺
+  ## ${licenseLink}
   # Description
   ### ${data.description}
   # 📚📚 Table of Contents📚📚
@@ -88,7 +83,7 @@ inquirer.prompt([
   # Installation
   ${data.installation}
   # Usage
-  ${data.usage}
+  Please click on the included url for the walthrough video which demonstrates how to use this tool
   # Contributors
   ${data.contributors}
   # Instructions 👀
@@ -96,10 +91,9 @@ inquirer.prompt([
   # Credits
   ${data.credits}
   # License
-  The application you're enjoying is covered under the ${data.license} license.
-  [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/${licenseLink})
+  The application you're enjoying is covered under the ${data.license} license
   # Questions ❓❓
-    For questions, please email me, or contact me via GitHub.
+  For questions, please email me, or contact me via GitHub.
   * 📧Email📬: ${data.email}
   * 💹GitHub: www.github.com/${data.gitHub}`;
   console.log(readMe);
