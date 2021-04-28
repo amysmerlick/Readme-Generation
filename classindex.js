@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+
 inquirer.prompt([
   {
     type: 'input',
@@ -47,7 +48,7 @@ inquirer.prompt([
     type: 'list',
     message: 'Please choose your license',
     name: 'license',
-    choices: ['GNU', 'Apache', 'Boost'],
+    choices: ['GNU', 'Apache'],
     validate: (value) => { if (value) { return true } else { return "Please enter a value to continue"  } },
   },
   {
@@ -72,18 +73,15 @@ inquirer.prompt([
   else if (data.license==="GNU"){
     licenseLink = "https://choosealicense.com/licenses/lgpl-3.0/#"
   }
-  else {
-    licenseLink="Boost"
-  }
   const filename = 'README.md';
   const readMe = `
-  # 🔥 ${data.title} 🔥
+  # 🌺${data.title}🌺
   # Description
   ### ${data.description}
-  # Table of Contents
+  # 📚📚 Table of Contents📚📚
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contribution](#contributors)
+  * [Contributors](#contributors)
   * [Credits](#credits)
   * [License](#license)
   
@@ -91,19 +89,19 @@ inquirer.prompt([
   ${data.installation}
   # Usage
   ${data.usage}
-  # Contribution
+  # Contributors
   ${data.contributors}
-  # Instructions
+  # Instructions 👀
   ${data.instructions}
-  # Credits📚
+  # Credits
   ${data.credits}
   # License
   The application you're enjoying is covered under the ${data.license} license.
-  [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](${licenseLink})
+  [![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/${licenseLink})
   # Questions ❓❓
     For questions, please email me, or contact me via GitHub.
-  * 📧Email: ${data.email} 
-  * GitHub: ${data.gitHub}`;
+  * 📧Email📬: ${data.email}
+  * 💹GitHub: www.github.com/${data.gitHub}`;
   console.log(readMe);
   fs.writeFile(filename, readMe, (err) =>
     err ? console.log(err) : console.log('Success!')
