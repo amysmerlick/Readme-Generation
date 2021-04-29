@@ -22,6 +22,12 @@ inquirer.prompt([
   },
   {
     type: 'input',
+    message: 'Please include the link to your live demo',
+    name: 'usage',
+    validate: (value) => { if (value) { return true } else { return "Please enter a value to continue" } },
+  },
+  {
+    type: 'input',
     message: 'Please list your Contributors',
     name: 'contributors',
     validate: (value) => { if (value) { return true } else { return "Please enter a value to continue"  } },
@@ -83,6 +89,7 @@ inquirer.prompt([
   # Installation
   ${data.installation}
   # Usage
+  ${data.usage}
   Please click on the included url for the walthrough video which demonstrates how to use this tool
   # Contributors
   ${data.contributors}
@@ -95,7 +102,7 @@ inquirer.prompt([
   # Questions ❓❓
   For questions, please email me, or contact me via GitHub.
   * 📧Email📬: ${data.email}
-  * 💹GitHub: www.github.com/${data.gitHub}`;
+  * 💹GitHub💹: www.github.com/${data.gitHub}`;
   console.log(readMe);
   fs.writeFile(filename, readMe, (err) =>
     err ? console.log(err) : console.log('Success!')
