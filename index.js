@@ -89,10 +89,11 @@ inquirer.prompt([
   # Installation
   ${data.installation}
   # Usage
-  ${data.usage}
   Please click on the included url for the walthrough video which demonstrates how to use this tool
+  ${data.usage}
   # Contributors
   ${data.contributors}
+  ![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=amysmerlick&theme=blue-green)
   # Instructions 👀
   ${data.instructions}
   # Credits
@@ -102,7 +103,8 @@ inquirer.prompt([
   # Questions ❓❓
   For questions, please email me, or contact me via GitHub.
   * 📧Email📬: ${data.email}
-  * 💹GitHub💹: www.github.com/${data.gitHub}`;
+  * 💹GitHub💹: www.github.com/${data.gitHub}
+  * ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)`;
   console.log(readMe);
   fs.writeFile(filename, readMe, (err) =>
     err ? console.log(err) : console.log('Success!')
