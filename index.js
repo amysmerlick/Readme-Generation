@@ -76,7 +76,7 @@ inquirer.prompt([
   const filename = 'README.md';
   const readMe = `
   # 🌺${data.title}🌺
-  ## ${licenseLink}
+  # ${licenseLink}
   # Description
   ### ${data.description}
   # 📚📚 Table of Contents📚📚
